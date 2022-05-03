@@ -16,19 +16,20 @@ pipeline {
                     nexusArtifactUploader artifacts: [
                         [
                             artifactId: 'simple-app', 
-                            classifier: '', 
-                            file: "target/simple-app-${mavenPom.version}.war", 
+                            classifier: '',
+                            file: 'target/simple-app-3.0.0.war', 
                             type: 'war'
                         ]
                     ], 
-                    credentialsId: 'nexus3', 
-                    groupId: 'in.javahome', 
-                    nexusUrl: '172.31.15.204:8081', 
-                    nexusVersion: 'nexus3', 
-                    protocol: 'http', 
-                    repository: nexusRepoName, 
-                    version: "${mavenPom.version}"
-                    }
+                        credentialsId: 'nexus-jenkins',
+                        groupId: 'in.javahome',
+                        nexusUrl: '172.31.25.91:8081',
+                        nexusVersion: 'nexus3',
+                        protocol: 'http',
+                        repository: 'java-repo-realese',
+                        version: '3.0.0'
+                    
+                }
             }
         }
     }
