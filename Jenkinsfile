@@ -21,7 +21,7 @@ pipeline {
                     ], 
                         credentialsId: 'nexus-jenkins',
                         groupId: 'in.javahome',
-                        nexusUrl: '172.31.25.91:8081',
+                        nexusUrl: '54.167.74.7:8081',
                         nexusVersion: 'nexus3',
                         protocol: 'http',
                         repository: 'java-repo-realese',
